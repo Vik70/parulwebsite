@@ -1,0 +1,27 @@
+
+.parul img {
+    transition: all 200ms ease-in;
+    filter: grayscale(1) opacity(.8);
+}
+
+.parul img:hover {
+    filter: grayscale(0) opacity(1);
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.705);
+}
+
+.parul img::before, .parul img::after {
+    transform: scaleY(-1);
+}
+
+.parul img:hover::after {
+    content: '';
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  width: inherit;
+  height: 40%;
+  position: absolute;
+  bottom: -25%;
+}
